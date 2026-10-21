@@ -1,12 +1,12 @@
 #include <stdio.h>
-double ma_to_a(double ma) {
-    const int ABD = 1000;
-    return ma / ABD;
+double yr_to_day(double yr) {
+    const int YR_TO_DY = 365;
+    return yr * YR_TO_DY;
 }
 int main(void) {
-    double ma = 0;
-    while (scanf("%lf", &ma) == 1) {
-        printf("%0.2lf\n", ma_to_a(ma));
+    double yr = 0;
+    while (scanf("%lf", &yr) == 1) {
+        printf("%0.2lf\n", yr_to_day(yr));
     }
     return 0;
 }
