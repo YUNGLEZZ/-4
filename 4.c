@@ -1,12 +1,14 @@
 #include <stdio.h>
 int main(void) {
-    int n, sch = 0;
-    double itog = 1.0;
+    int n, a1, a2;
+    int itog = 0;
     scanf("%d", &n);
-    while(sch < n) {
-        itog *= 1000;
-        sch++;
+    while(n > 0) {
+        a1 = n % 10;
+        a2 = n / 10;
+        itog = itog * 10 + a1;
+        n = n / 10;
     }
-    printf("%.6f\n", itog);
+    printf("%d\n", itog);
     return 0;
 }
