@@ -1,11 +1,12 @@
 #include <stdio.h>
 #include <stdint.h> 
 int main(void) {
-    uint32_t n = 0;
-    scanf("%u", &n); 
-    printf("%f\n", (float)n * (n + 1) / 2);
-    printf("%llu\n", (unsigned long long)sizeof(n));
+    uint16_t u, i;
+    scanf("%hu %hu", &u, &i); 
+    printf("%f\n", (float)u / (float)i);
+    printf("%llu\n", (unsigned long long)sizeof(u));
+    printf("%llu\n", (unsigned long long)sizeof(i));
     printf("%llu\n", (unsigned long long)sizeof(float));
-    printf("%llu\n", (unsigned long long)sizeof(int));
+    printf("%llu\n", (unsigned long long)sizeof(uint16_t));
     return 0;
 }
